@@ -2,19 +2,17 @@ package org.example;
 
 public class Student {
 
-    // Приватні поля для збереження даних про студента
+    // Дані про студента, private
     private int id;
     private String firstName;
     private String secondName;
 
-    // Конструктор класу, який приймає параметри для ініціалізації полів
     public Student(int id, String firstName, String secondName) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
     }
 
-    // Гетери та сетери для доступу та зміни полів
     public int getId() {
         return id;
     }
@@ -37,6 +35,6 @@ public class Student {
 
     public void setSecondName(String secondName) {
         this.secondName = secondName;
+        System.out.println(secondName);
     }
-
 }

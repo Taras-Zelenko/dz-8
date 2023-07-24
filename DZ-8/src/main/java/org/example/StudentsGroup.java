@@ -2,12 +2,11 @@ package org.example;
 import java.util.List;
 
 public class StudentsGroup {
-    // Приватні поля для збереження даних про групу
+    // Дані про групу, private
     private Student leader; // Староста
     private List<Student> students; // Список студентів
     private List<String> tasks; // Список завдань
 
-    // Конструктор класу, який приймає параметри для ініціалізації полів
     public StudentsGroup(Student leader, List<Student> students, List<String> tasks) {
         // Перевірка, чи є староста серед студентів
         if (students.contains(leader)) {
@@ -20,7 +19,6 @@ public class StudentsGroup {
         }
     }
 
-    // Гетери та сетери для доступу та зміни полів
     public Student getLeader() {
         return leader;
     }
@@ -79,7 +77,7 @@ public class StudentsGroup {
         tasks.add(task);
     }
 
-    // Метод для позначення завдання як виконаного для зазначеного студента
+    // Метод для позначення завдання, як виконаного для зазначеного студента
     public boolean markTaskAsDone(Student student, String task) {
         // Перевірка, чи є студент у групі
         if (students.contains(student)) {
@@ -95,5 +93,6 @@ public class StudentsGroup {
             // Викидаємо виняток, якщо студент не у групі
             throw new IllegalArgumentException("Student MUST be in the group.");
         }
+
     }
 }
